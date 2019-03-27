@@ -1,0 +1,19 @@
+{
+  "name": "cordova-text-encrypt",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "cordova-text-encrypt",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Peter",
+  "license": "ISC"
+}

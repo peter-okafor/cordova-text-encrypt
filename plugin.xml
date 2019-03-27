@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<plugin id="cordova-text-encrypt" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>TextEncrypt</name>
+    <js-module name="TextEncrypt" src="www/TextEncrypt.js">
+        <clobbers target="cordova.plugins.TextEncrypt" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="TextEncrypt">
+                <param name="android-package" value="com.niftyfissions.TextEncrypt" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-feature android:name="android.hardware.telephony" android:required="false" />
+        </config-file>
+        <source-file src="src/android/TextEncrypt.java" target-dir="src/cordova-text-encrypt/TextEncrypt" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="TextEncrypt">
+                <param name="ios-package" value="TextEncrypt" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/TextEncrypt.h" />
+        <source-file src="src/ios/TextEncrypt.m" />
+    </platform>
+</plugin>
